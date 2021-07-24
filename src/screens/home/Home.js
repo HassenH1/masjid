@@ -61,6 +61,10 @@ function Home() {
         </div>
       )} */}
 
+      <div className="wrapper">
+        <p>Not working for some reason</p>
+      </div>
+
       <Title title="Program Schedule" />
 
       <div className="wrapper">
