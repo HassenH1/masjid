@@ -42,7 +42,7 @@ function Home() {
 
       <Title title="Quick Hadith" />
 
-      {!hadith ? (
+      {/* {!hadith ? (
         <Loading />
       ) : (
         <div className="wrapper">
@@ -59,7 +59,7 @@ function Home() {
             }}
           ></div>
         </div>
-      )}
+      )} */}
 
       <Title title="Program Schedule" />
 
