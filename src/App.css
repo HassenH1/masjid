@@ -1,38 +1,388 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
+.body {
+  font-family: "Arvo", serif;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin: auto;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
 }
+
+/******************************Loading*/
+
+/******************************Body */
+
+/*Desktop View*/
+.header {
+  display: flex;
+  border: 1px solid whitesmoke;
+  align-items: center;
+  padding: 0px 40px;
+  height: 80px;
+  font-family: "Arvo", serif;
+  font-size: 14px;
+}
+.logo-nav {
+  flex: 1;
+}
+.logo-wrapper {
+  display: flex;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 45px;
+  height: 45px;
+}
+.nav-options {
+  padding-left: 25px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 50px;
+  list-style-type: none;
+}
+.mobile-option {
+  display: none;
+}
+/*@todo: fix hover color*/
+.option :hover {
+  color: white;
+}
+.mobile-menu {
+  display: none;
+}
+
+/******************************Navbar */
+/** change color of links*/
+
+.title {
+  text-align: center;
+  width: 51%;
+  margin: auto;
+  padding: 150px 0;
+  font-size: 36px;
+  color: white;
+}
+
+.container {
+  background-image: url(./assets/mosque.jpeg);
+  margin: 0;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-position: center;
+  -moz-box-shadow: inset 10px 10px 800px 60px #000000;
+  -webkit-box-shadow: inset 10px 10px 800px 60px #000000;
+  box-shadow: inset 10px 10px 800px 60px #000000;
+}
+
+.text-lg {
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  /* background-color: whitesmoke; */
+}
+
+.one {
+  flex: 1;
+  padding: 50px;
+  font-size: 20px;
+}
+.text-one {
+  padding: 5rem 7rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.two {
+  flex: 1;
+  padding: 50px;
+  font-size: 26px;
+  direction: rtl;
+  text-align: right;
+}
+.text-two {
+  font-size: 32px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper2 {
+  margin: 15px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+}
+
+.prayer-time {
+  flex: 1;
+  background: #639aaf;
+}
+
+.upcoming-event {
+  flex: 2;
+  border: 1px solid wheat;
+}
+
+table,
+td,
+th {
+  border: 1px solid #639aaf;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wrapper3 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  border-radius: 2%;
+  margin: 8px;
+  width: 600px;
+  height: 300px;
+  box-shadow: 0.1px 0.1px 0.1px 1px;
+  border-radius: 0.4em;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  padding: 6px;
+  font-weight: lighter;
+  justify-content: space-evenly;
+}
+.green {
+  border: 1px solid lightgreen;
+}
+
+.pink {
+  border: 1px solid pink;
+}
+.aqua {
+  border: 1px solid aqua;
+}
+.orange {
+  border: 1px solid orange;
+}
+.purple {
+  border: 1px solid purple;
+}
+.tomato {
+  border: 1px solid tomato;
+}
+
+.footer {
+  background: #1292b0;
+  display: flex;
+  color: white;
+}
+
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 18px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 100%;
+  border: 2px solid wheat;
+}
+
+.fa-facebook {
+  /* background: #3b5998; */
+  color: white;
+}
+
+@media (max-width: 648px) {
+  /*Mobile View */
+  .header {
+    padding: 0px 10px;
+  }
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  .nav-options {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+    grid-gap: 0px;
+  }
+  .nav-options.active {
+    background: whitesmoke;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-content: center;
+    padding-left: 0px;
+    margin: 0;
+    height: auto;
+  }
+
+  .menu-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 30px 0px;
+  }
+}
+.mobile-menu {
+  display: block;
+}
+
+@media (max-width: 648px) {
+  /*Mobile View */
+
+  .title {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding: 100px 0;
+    font-size: 22px;
+    color: white;
+  }
+
+  .container {
+    background-image: url(./assets/mosque.jpeg);
+    margin: 0;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+  .text-lg {
+    font-size: 1rem;
+    color: whitesmoke;
+  }
+  .wrapper {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+  }
+  .one {
+  }
+  .text-one {
+    padding: 1rem 3rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .two {
+  }
+  .text-two {
+    padding: 3rem 3rem;
+    font-size: 22;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wrapper2 {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prayer-time {
+    flex: 1;
+    background: #639aaf;
+  }
+
+  .upcoming-event {
+    flex: 2;
+  }
+
+  .wrapper3 {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 4px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    border-radius: 2%;
+    margin: 8px;
+    width: 318px;
+    height: 150px;
+  }
+
+  .footer {
+    background: #1292b0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+}
+
+/******************************Home */
