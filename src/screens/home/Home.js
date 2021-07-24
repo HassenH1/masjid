@@ -16,6 +16,7 @@ function Home() {
   const fetchData = async () => {
     try {
       const resp = await fetch("http://localhost:4000");
+      // const resp = await fetch(`${process.env.PUBLIC_URL}`);
       const data = await resp.json();
       data && setHadith(data);
     } catch (e) {

@@ -38,6 +38,7 @@ app.get("/", async (req, res) => {
       },
     });
     const data = await resp.json();
+    console.log(JSON.stringify(data, null, 2), "<=-=-=-=-what is this");
     res.json(data);
   } catch (e) {
     res.json(e);
