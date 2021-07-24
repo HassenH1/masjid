@@ -46,7 +46,19 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/test", (req, res) => {
-  res.send("hello world");
+  try {
+    const resp = await fetch(process.env.API_URL, {
+      method: "GET",
+      headers: {
+        "x-api-key": process.env.API_KEY,
+      },
+    });
+    const data = await resp.json();
+    console.log(JSON.stringify(data, null, 2), "<=-=-=-=-what is this test");
+    res.send(data);
+  } catch (e) {
+    res.json(e);
+  }
 });
 
 app.get("/*", (req, res) => {
