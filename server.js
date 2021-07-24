@@ -6,7 +6,7 @@ const cors = require("cors");
 const app = express();
 const path = require("path");
 require("dotenv").config();
-const PORT = process.env.PORT || 4000;
+const PORT = 4000;
 
 app.use(cors());
 
@@ -45,10 +45,14 @@ app.get("/", async (req, res) => {
   }
 });
 
+app.get("/test", (req, res) => {
+  res.send("hello world");
+});
+
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
