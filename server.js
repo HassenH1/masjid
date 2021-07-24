@@ -45,21 +45,21 @@ app.get("/", async (req, res) => {
   }
 });
 
-app.get("/test", (req, res) => {
-  try {
-    const resp = await fetch(process.env.API_URL, {
-      method: "GET",
-      headers: {
-        "x-api-key": process.env.API_KEY,
-      },
-    });
-    const data = await resp.json();
-    console.log(JSON.stringify(data, null, 2), "<=-=-=-=-what is this test");
-    res.send(data);
-  } catch (e) {
-    res.json(e);
-  }
-});
+// app.get("/test", (req, res) => {
+//   try {
+//     const resp = await fetch(process.env.API_URL, {
+//       method: "GET",
+//       headers: {
+//         "x-api-key": process.env.API_KEY,
+//       },
+//     });
+//     const data = await resp.json();
+//     console.log(JSON.stringify(data, null, 2), "<=-=-=-=-what is this test");
+//     res.send(data);
+//   } catch (e) {
+//     res.json(e);
+//   }
+// });
 
 app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
