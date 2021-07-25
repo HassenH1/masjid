@@ -21,7 +21,8 @@ app.use(express.json());
 // override with POST having ?_method=DELETE
 app.use(methodOverride("_method"));
 
-app.get("/", async (req, res) => {
+app.get("/test", async (req, res) => {
+  console.log("hitt here to server");
   try {
     const resp = await fetch(process.env.API_URL, {
       method: "GET",
