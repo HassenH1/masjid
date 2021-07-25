@@ -15,12 +15,13 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      // const resp = await fetch("http://localhost:4000");
+      console.log("<-=-==-hit?");
+      const resp = await fetch("http://localhost:4000");
       // const resp = await fetch(`${process.env.NODE_ENV}`);
       // const resp = await fetch();
-      const resp = await fetch(
-        "https://masjid-fatimah-az-zahra.herokuapp.com/"
-      );
+      // const resp = await fetch(
+      //   "https://masjid-fatimah-az-zahra.herokuapp.com/"
+      // );
       const data = await resp.json();
       data && setHadith(data);
     } catch (e) {
@@ -60,10 +61,6 @@ function Home() {
           ></div>
         </div>
       )}
-
-      {/* <div className="wrapper">
-        <p>Not working for some reason</p>
-      </div> */}
 
       <Title title="Program Schedule" />
 
