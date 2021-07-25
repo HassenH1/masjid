@@ -20,7 +20,6 @@ app.use(express.json());
 app.use(methodOverride("_method"));
 
 app.get("/", async (req, res) => {
-  console.log(process.env.API_URL, "<=-=-=-=-=huh?");
   try {
     const resp = await fetch(process.env.API_URL, {
       method: "GET",
