@@ -15,13 +15,7 @@ function Home() {
 
   const fetchData = async () => {
     try {
-      console.log("<-=-==-hit?");
-      // const resp = await fetch("http://localhost:4000/");
-      // const resp = await fetch(`${process.env.NODE_ENV}`);
-      const resp = await fetch("/test");
-      // const resp = await fetch(
-      //   "https://masjid-fatimah-az-zahra.herokuapp.com/"
-      // );
+      const resp = await fetch("https://masjid-server.herokuapp.com/");
       const data = await resp.json();
       data && setHadith(data);
     } catch (e) {
