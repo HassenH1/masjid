@@ -1,6 +1,6 @@
 import React from "react";
 
-function Title({ title }) {
+function Title({ title, textColor }) {
   return (
     <>
       <div
@@ -13,7 +13,9 @@ function Title({ title }) {
           fontSize: 32,
         }}
       >
-        <p style={{ marginTop: 32, marginBottom: 0 }}>{title}</p>
+        <p style={{ marginTop: 32, marginBottom: 0, color: textColor }}>
+          {title}
+        </p>
       </div>
       <div
         style={{

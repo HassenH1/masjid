@@ -62,7 +62,7 @@ function Home() {
         <div className="wrapper2">
           <div className="prayer-time">
             {/* change title styling */}
-            <Title title="Prayer Times" />
+            <Title title="Prayer Times" textColor="white" />
 
             <div
               style={{
