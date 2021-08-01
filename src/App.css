@@ -90,16 +90,30 @@
 /** change color of links*/
 
 .title {
-  text-align: center;
+  /* text-align: center; */
   width: 51%;
   margin: auto;
-  padding: 150px 0;
-  font-size: 36px;
-  color: white;
+  padding: 250px 0;
+  /* font-size: 36px; */
+  /* color: white; */
+  /* background-image: url(./assets/masjidfront.jpg);
+  margin: 0;
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  -moz-box-shadow: inset 10px 10px 800px 60px #000000;
+  -webkit-box-shadow: inset 10px 10px 800px 60px #000000;
+  box-shadow: inset 10px 10px 800px 60px #000000;
+  background-position-y: -50px;
+  background-position-x: 0px; */
 }
 
 .container {
-  background-image: url(./assets/mosque.jpeg);
+  /* background-image: url(./assets/mosque.jpeg); */
+  /* background-image: url(./assets/frontofmasjid.jpg); */
+  background-image: url(./assets/masjidfront.jpg);
+
   margin: 0;
   background-repeat: no-repeat, no-repeat;
   background-size: cover;
@@ -107,6 +121,8 @@
   -moz-box-shadow: inset 10px 10px 800px 60px #000000;
   -webkit-box-shadow: inset 10px 10px 800px 60px #000000;
   box-shadow: inset 10px 10px 800px 60px #000000;
+  background-position-y: -50px;
+  background-position-x: 0px;
 }
 
 .text-lg {
@@ -125,6 +141,7 @@
   flex: 1;
   padding: 50px;
   font-size: 20px;
+  margin: 0px 3rem;
 }
 .text-one {
   padding: 5rem 7rem;
@@ -139,6 +156,7 @@
   font-size: 26px;
   direction: rtl;
   text-align: right;
+  margin: 0px 3rem;
 }
 .text-two {
   font-size: 32px;
@@ -162,7 +180,7 @@
 
 .upcoming-event {
   flex: 2;
-  border: 1px solid wheat;
+  border: 1px solid #639aaf;
 }
 
 table,
@@ -307,12 +325,20 @@ table {
   }
 
   .container {
-    background-image: url(./assets/mosque.jpeg);
+    /* background-image: url(./assets/mosque.jpeg); */
+    background-image: url(./assets/masjidfront.jpg);
     margin: 0;
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
     background-position: center;
     height: 100%;
+
+    background-position-y: 6.5px;
+    /* background-position-x: 0px; */
+
+    -moz-box-shadow: inset 0px 0px 200px 60px #000000;
+    -webkit-box-shadow: inset 0px 0px 70px 60px #000000;
+    box-shadow: inset 0px 0px 800px 0px #000000;
   }
   .text-lg {
     font-size: 1rem;
@@ -324,6 +350,7 @@ table {
     flex-direction: column;
   }
   .one {
+    margin: 0px 0rem;
   }
   .text-one {
     padding: 1rem 3rem;
@@ -333,6 +360,7 @@ table {
     align-items: center;
   }
   .two {
+    margin: 0px 0rem;
   }
   .text-two {
     padding: 3rem 3rem;
@@ -366,6 +394,7 @@ table {
     gap: 4px;
     flex-direction: column;
     flex-wrap: wrap;
+    /* margin: 0 1rem; */
   }
 
   .box {

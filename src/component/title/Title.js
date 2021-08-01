@@ -1,6 +1,6 @@
 import React from "react";
 
-function Title({ title, textColor }) {
+function Title({ title, textColor, marginStyle, fontSize }) {
   return (
     <>
       <div
@@ -10,7 +10,7 @@ function Title({ title, textColor }) {
           alignItems: "center",
           letterSpacing: 3,
           fontWeight: 50,
-          fontSize: 32,
+          fontSize: fontSize ? fontSize : 32,
         }}
       >
         <p style={{ marginTop: 32, marginBottom: 0, color: textColor }}>
@@ -21,7 +21,7 @@ function Title({ title, textColor }) {
         style={{
           width: "20%",
           margin: "auto",
-          marginBottom: 32,
+          marginBottom: marginStyle ? marginStyle : 32,
         }}
       >
         <hr />
