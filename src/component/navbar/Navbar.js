@@ -2,13 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as CloseMenu } from "../../assets/x.svg";
 import { ReactComponent as MenuIcon } from "../../assets/menu.svg";
-// import { ReactComponent as Logo } from "../../assets/logo.svg";
 import "../../App.css";
 
-/**
- * @todo need to fix stlying here
- * @returns
- */
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -38,7 +33,8 @@ const Navbar = () => {
         </div>
       </div>
       <Link
-        to="https://www.gofundme.com/f/masjidfaatimah2021"
+        to={{ pathname: "https://www.gofundme.com/f/masjidfaatimah2021" }}
+        target="_blank"
         style={{
           justifyContent: "flex-end",
           paddingTop: 5,

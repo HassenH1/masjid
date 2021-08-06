@@ -249,7 +249,59 @@ table {
   color: white;
 }
 
-@media (max-width: 648px) {
+/*****************about***********************/
+.about {
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.about-content-wrapper {
+  display: flex;
+  margin: auto;
+  height: 80%;
+  width: 80%;
+}
+
+.about-img-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-text-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text {
+  margin: 0 10px;
+  text-align: left;
+  font-size: 20;
+  /* font-size: 28; */
+  letter-spacing: 2;
+}
+
+.about-img {
+  width: 80%;
+  height: 60%;
+  transition: transform 0.2s;
+}
+
+.about-img:hover {
+  transform: scale(1.1);
+}
+/*****************about***********************/
+
+@media (max-width: 748px) {
   /*Mobile View */
   .header {
     padding: 0px 10px;
@@ -294,12 +346,64 @@ table {
     height: 10vw;
     padding: 30px 0px;
   }
+
+  /*****************about***********************/
+  .about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .about-content-wrapper {
+    display: flex;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+    flex-direction: column;
+  }
+
+  .about-img-wrapper {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+  }
+
+  .about-img {
+    width: 80%;
+    height: 80%;
+    transition: transform 0.2s;
+    /* transform: hover ? "scale(1.1)" : "", */
+  }
+
+  .about-text-wrapper {
+    flex: 1;
+    /* height: 50%; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+  }
+
+  .about-text {
+    margin: 0 10px;
+    text-align: left;
+    font-size: 20;
+    /* font-size: 28; */
+    letter-spacing: 2;
+  }
+  /*****************about***********************/
 }
 .mobile-menu {
   display: block;
 }
 
-@media (max-width: 648px) {
+@media (max-width: 748px) {
   /*Mobile View */
 
   .title {
