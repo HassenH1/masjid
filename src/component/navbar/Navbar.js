@@ -38,7 +38,7 @@ const Navbar = () => {
         </div>
       </div>
       <Link
-        to="/donate"
+        to="https://www.gofundme.com/f/masjidfaatimah2021"
         style={{
           justifyContent: "flex-end",
           paddingTop: 5,
