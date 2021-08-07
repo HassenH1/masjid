@@ -2,7 +2,7 @@ import React from "react";
 
 function QuickHadith({ hadith }) {
   return (
-    <div className="wrapper">
+    <div className="container border">
       <div
         className="one"
         dangerouslySetInnerHTML={{

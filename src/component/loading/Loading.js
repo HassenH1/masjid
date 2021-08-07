@@ -4,14 +4,12 @@ import "../../App.css";
 function Loading() {
   return (
     <div
-      style={{
-        height: "50vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
+      className="d-flex justify-content-center align-items-center container"
+      style={{ height: "50vh" }}
     >
-      <div className="loading"></div>
+      <div className="spinner-border text-primary" role="status">
+        <span className="sr-only">Loading...</span>
+      </div>
     </div>
   );
 }
