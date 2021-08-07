@@ -5,6 +5,7 @@ import PrayerSchedule from "../../component/prayerschedule/PrayerSchedule";
 import Events from "../../component/events/Events";
 import Services from "../../component/services/Services";
 import QuickHadith from "../../component/quickhadith/QuickHadith";
+import FrontOfMasjid from "../../assets/frontofmasjid.jpg";
 
 function Home() {
   const today = new Date();
@@ -33,8 +34,19 @@ function Home() {
 
   return (
     <div>
-      <div className="container">
+      {/* <div className="container">
         <div className="title"></div>
+      </div> */}
+
+      <div className="container d-flex justify-content-center">
+        <div
+          class="text-center bg-image w-100"
+          style={{
+            backgroundImage: `url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg')`,
+            height: "400px",
+            backgroundRepeat: "no-repeat no-repeat",
+          }}
+        ></div>
       </div>
 
       <Title title="Quick Hadith" marginStyle={0} />

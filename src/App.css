@@ -1,8 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .body {
   font-family: "Arvo", serif;
   height: 100%;
+  width: 100%;
 }
 
 .loading {
@@ -95,10 +101,8 @@
   margin: auto;
   padding: 250px 0;
 }
-
+/* 
 .container {
-  /* background-image: url(./assets/mosque.jpeg); */
-  /* background-image: url(./assets/frontofmasjid.jpg); */
   background-image: url(./assets/masjidfront.jpg);
 
   margin: 0;
@@ -110,7 +114,7 @@
   box-shadow: inset 10px 10px 800px 60px #000000;
   background-position-y: -50px;
   background-position-x: 0px;
-}
+} */
 
 .text-lg {
   font-size: 2rem;
@@ -429,6 +433,7 @@ table {
     -webkit-box-shadow: inset 0px 0px 70px 60px #000000;
     box-shadow: inset 0px 0px 800px 0px #000000;
   }
+
   .text-lg {
     font-size: 1rem;
     color: whitesmoke;
