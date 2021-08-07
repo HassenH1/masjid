@@ -14,7 +14,7 @@ const NavbarComponent = () => {
       <Navbar.Brand className="ms-3">Masjid Faatimah</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="me-auto">
+        <Nav className="ms-auto">
           <Nav.Link>
             <Link to="/" style={{ textDecoration: "none", color: "black" }}>
               Home
@@ -25,9 +25,24 @@ const NavbarComponent = () => {
               to="/about"
               style={{ textDecoration: "none", color: "black" }}
             >
-              About
+              About Us
             </Link>
           </Nav.Link>
+          <Nav.Link>
+            <Link to="/" style={{ textDecoration: "none", color: "black" }}>
+              Our Services
+            </Link>
+          </Nav.Link>
+          <span className="nav-link">
+            <a
+              href="https://www.gofundme.com/f/masjidfaatimah2021"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              Donate
+            </a>
+          </span>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
