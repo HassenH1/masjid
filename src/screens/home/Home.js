@@ -34,19 +34,51 @@ function Home() {
 
   return (
     <div>
-      {/* <div className="container">
-        <div className="title"></div>
-      </div> */}
-
-      <div className="container d-flex justify-content-center">
+      <div className="containercustom d-flex justify-content-center">
         <div
           class="text-center bg-image w-100"
           style={{
-            backgroundImage: `url('https://mdbcdn.b-cdn.net/img/new/slides/041.jpg')`,
-            height: "400px",
-            backgroundRepeat: "no-repeat no-repeat",
+            height: "500px",
           }}
-        ></div>
+        >
+          <div
+            className="mask"
+            style={{ backgroundColor: "rgba(0, 0, 0, 0.1)", height: "100%" }}
+          >
+            <div className="d-flex justify-content-start align-items-start h-100 flex-column w-100">
+              <div class="flex-column d-flex justify-content-end align-items-end h-100">
+                <div class="text-center ms-3">
+                  <h4 class="text-uppercase text-white">Download our App</h4>
+                  <div class="buttons justify-content-center mt-3 mb-3">
+                    {" "}
+                    <a href="https://apps.apple.com/us/app/quran-qaidah-level-1/id1536581660">
+                      <button
+                        class="btn btn-dark app-button"
+                        style={{ border: "1px solid #639aaf" }}
+                      >
+                        <i class="fa fa-apple fa-2x me-3 align-middle"></i>
+                        <span class="text-uppercase ml-2 align-middle">
+                          Apple store
+                        </span>
+                      </button>
+                    </a>{" "}
+                    <a href="https://play.google.com/store/apps/details?id=air.com.fatima.quranqaidah1">
+                      <button
+                        class="btn btn-dark app-button"
+                        style={{ border: "1px solid #639aaf" }}
+                      >
+                        <i class="fa fa-play fa-2x me-3 align-middle"></i>
+                        <span class="text-uppercase ml-2 align-middle">
+                          Google store
+                        </span>
+                      </button>
+                    </a>{" "}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <Title title="Quick Hadith" marginStyle={0} />
@@ -55,15 +87,13 @@ function Home() {
 
       <Title title="Program Schedule" />
 
-      <div className="wrapper">
-        <div className="wrapper2">
+      <div className="container d-flex flex-row p-0">
+        <div className="wrapper2 w-100 text-center">
           <div className="prayer-time">
-            {/* change title styling */}
             <Title title="Prayer Times" textColor="white" />
             <PrayerSchedule today={today} options={options} />
           </div>
           <div className="upcoming-event">
-            {/* change title styling */}
             <Title title="Events" fontSize={22} />
             <Events today={today} options={options} />
           </div>

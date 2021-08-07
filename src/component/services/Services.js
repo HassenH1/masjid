@@ -2,7 +2,7 @@ import React from "react";
 
 function Services() {
   return (
-    <div className="wrapper3">
+    <div className="container d-flex flex-wrap justify-content-center align-items-center p-0 gap-5">
       <div className="box green">
         <div className="content">
           <div>
