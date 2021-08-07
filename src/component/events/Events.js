@@ -45,7 +45,7 @@ function Events({ today, options }) {
                       <span class="widget-49-date-day">{each.timeTense}</span>
                       <br />
                       <span class="widget-49-date-month">
-                        {"Monday thur Thursday"}
+                        {"Monday thru Thursday"}
                       </span>
                       {/* <span class="widget-49-date-day">13</span>
                       <span class="widget-49-date-month">apr</span> */}
