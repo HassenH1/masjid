@@ -163,7 +163,6 @@ function MyVerticallyCenteredModal(props) {
             dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
             ac consectetur ac, vestibulum at eros.
           </p>
-          {/* <p>{props}</p> */}
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
