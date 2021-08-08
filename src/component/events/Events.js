@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 
 function Events({ today, options }) {
-  const [modalShow, setModalShow] = useState(false);
+  const [modal, setModal] = useState({
+    modal: false,
+    details: null,
+  });
   const events = [
     {
       title: "Daily Quran Classes",
@@ -74,7 +77,12 @@ function Events({ today, options }) {
                       </button> */}
                       <Button
                         variant="primary"
-                        onClick={() => setModalShow(true)}
+                        onClick={() =>
+                          setModal({
+                            modal: true,
+                            details: each,
+                          })
+                        }
                       >
                         More details...
                       </Button>
@@ -133,8 +141,14 @@ function Events({ today, options }) {
         })}
       </div>
       <MyVerticallyCenteredModal
-        show={modalShow}
-        onHide={() => setModalShow(false)}
+        show={modal.modal}
+        details={modal.details}
+        onHide={() =>
+          setModal({
+            details: null,
+            modal: false,
+          })
+        }
       />
     </>
   );
@@ -145,6 +159,7 @@ export default Events;
 function MyVerticallyCenteredModal(props) {
   return (
     <>
+      {console.log(JSON.stringify(props, null, 2))}
       <Modal
         {...props}
         size="lg"
