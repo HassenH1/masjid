@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
 
 function Events({ today, options }) {
@@ -29,41 +29,43 @@ function Events({ today, options }) {
       >
         {events.map((each, index) => {
           return (
-            <div class="col-lg-4 w-100" key={index}>
-              <div class="card card-margin">
-                <div class="card-header no-border">
-                  <h5 class="card-title">{each.title}</h5>
+            <div className="col-lg-4 w-100" key={index}>
+              <div className="card card-margin">
+                <div className="card-header no-border">
+                  <h5 className="card-title">{each.title}</h5>
                 </div>
-                <div class="card-body pt-0">
-                  <div class="widget-49">
-                    <div class="widget-49-title-wrapper">
-                      <div class="widget-49-date-warning">
-                        <span class="widget-49-date-day">{each.timeTense}</span>
+                <div className="card-body pt-0">
+                  <div className="widget-49">
+                    <div className="widget-49-title-wrapper">
+                      <div className="widget-49-date-warning">
+                        <span className="widget-49-date-day">
+                          {each.timeTense}
+                        </span>
                         <br />
-                        <span class="widget-49-date-month">
+                        <span className="widget-49-date-month">
                           {"Monday thru Thursday"}
                         </span>
-                        {/* <span class="widget-49-date-day">13</span>
-                      <span class="widget-49-date-month">apr</span> */}
+                        {/* <span className="widget-49-date-day">13</span>
+                      <span className="widget-49-date-month">apr</span> */}
                       </div>
-                      <div class="widget-49-meeting-info">
-                        <span class="widget-49-pro-title"></span>
-                        <span class="widget-49-meeting-time">
+                      <div className="widget-49-meeting-info">
+                        <span className="widget-49-pro-title"></span>
+                        <span className="widget-49-meeting-time">
                           4:00 to 6:00 o'clock
                         </span>
                       </div>
                     </div>
                     {/* <ol
-                    class="widget-49-meeting-points"
+                    className="widget-49-meeting-points"
                     style={{ listStyleType: "none" }}
                   >
-                    <li class="widget-49-meeting-item">
+                    <li className="widget-49-meeting-item">
                       <span>Scheming module is removed</span>
                     </li>
-                    <li class="widget-49-meeting-item">
+                    <li className="widget-49-meeting-item">
                       <span>App design contract confirmed</span>
                     </li>
-                    <li class="widget-49-meeting-item">
+                    <li className="widget-49-meeting-item">
                       <span>Client request to send invoice</span>
                     </li>
                   </ol> */}

@@ -1,11 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Row, Col, Form } from "react-bootstrap";
 import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
+import Paypal from "../paypal/Paypal";
 
 const NavbarComponent = () => {
   const [modal, setModal] = useState(false);
-  const [variableName, setVariableName] = useState("");
+  const [amount, setAmount] = useState();
+  const [customAmount, setCustomAmount] = useState();
+
+  useEffect(() => {
+    if (customAmount !== "" && amount !== "other") {
+      setCustomAmount("");
+    }
+  }, [amount]);
 
   return (
     <>
@@ -38,18 +46,21 @@ const NavbarComponent = () => {
                 Our Services
               </Link>
             </Nav.Link>
+            <span className="nav-link">
+              <a
+                href="https://www.gofundme.com/f/masjidfaatimah2021"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Gofundme
+              </a>
+            </span>
             <span
               className="nav-link"
               onClick={() => setModal(!modal)}
               style={{ cursor: "pointer" }}
             >
-              {/* <a
-              href="https://www.gofundme.com/f/masjidfaatimah2021"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-            </a> */}
               <span
                 style={{
                   border: "1px solid green",
@@ -57,21 +68,12 @@ const NavbarComponent = () => {
                   paddingRight: "10px",
                   paddingTop: "3px",
                   paddingBottom: "3px",
+                  borderRadius: 25,
                 }}
               >
                 Donate
               </span>
             </span>
-            {/* <span className="nav-link">
-            <a
-              href="https://www.gofundme.com/f/masjidfaatimah2021"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              Donate
-            </a>
-          </span> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -82,109 +84,90 @@ const NavbarComponent = () => {
         heading={"none"}
       >
         <Container fluid className="px-5">
-          {/* <div
-            style={{
-              display: "flex",
-              justifyContent: "space-around",
-              flexDirection: "column",
-              margin: "auto",
-              width: "60%",
-            }}
-          >
-            <div
-              onClick={() => setVariableName("50")}
-              style={{
-                width: "auto",
-                padding: 15,
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                border: "1px solid gray",
-                alignItems: "center",
-                marginTop: "10px",
-              }}
-            >
-              <input
-                type="radio"
-                name="variableName"
-                value="50"
-                checked={variableName === "50"}
-                style={{
-                  marginRight: 5,
-                  flex: 1,
-                }}
-              />
-              <div style={{ flex: 5 }}>
-                <label htmlFor="radio-item-2" style={{ fontSize: "1.4rem" }}>
-                  $50
-                </label>
-              </div>
-            </div>
-            <div
-              onClick={() => setVariableName("100")}
-              style={{
-                width: "auto",
-                padding: 15,
-                display: "flex",
-                flexDirection: "row",
-                border: "1px solid gray",
-                justifyContent: "center",
-                alignItems: "center",
-                marginTop: "10px",
-              }}
-            >
-              <input
-                type="radio"
-                name="variableName"
-                value="100"
-                checked={variableName === "100"}
-                style={{
-                  marginRight: 5,
-                  flex: 1,
-                }}
-              />
-              <div style={{ flex: 5 }}>
-                <label htmlFor="radio-item-2" style={{ fontSize: "1.4rem" }}>
-                  $100
-                </label>
-              </div>
-            </div>
-          </div> */}
           <Row>
-            <Col sm style={{ border: "1px solid red", padding: 15 }}>
+            <Col sm style={{ padding: 15 }}>
               <Form.Check
                 type={"radio"}
-                id={`default-radio1`}
-                label={`default radio1`}
+                label={`$25`}
+                checked={amount === "25"}
+                onChange={(e) => setAmount("25")}
               />
             </Col>
-            <Col sm style={{ border: "1px solid red", padding: 15 }}>
+            <Col sm style={{ padding: 15 }}>
               <Form.Check
                 type={"radio"}
-                id={`default-radio2`}
-                label={`default radio2`}
+                label={`$50`}
+                checked={amount === "50"}
+                onChange={() => setAmount("50")}
               />
             </Col>
-            <Col sm style={{ border: "1px solid red", padding: 15 }}>
+            <Col sm style={{ padding: 15 }}>
               <Form.Check
                 type={"radio"}
-                id={`default-radio3`}
-                label={`default radio3`}
+                label={`$100`}
+                checked={amount === "100"}
+                onChange={() => setAmount("100")}
               />
             </Col>
           </Row>
           <Row>
-            <Col sm={4} style={{ border: "1px solid red", padding: 15 }}>
+            <Col sm style={{ padding: 15 }}>
               <Form.Check
                 type={"radio"}
-                id={`default-radio4`}
-                label={`default radio4`}
+                label={`$200`}
+                checked={amount === "200"}
+                onChange={() => setAmount("200")}
               />
             </Col>
-            <Col sm={8} style={{ border: "1px solid red", padding: 15 }}>
-              sm=8
+            <Col sm={4} style={{ padding: 15 }}>
+              <Form.Check
+                type={"radio"}
+                label={`$250`}
+                checked={amount === "250"}
+                onChange={() => setAmount("250")}
+              />
+            </Col>
+            <Col sm={4} style={{ padding: 15 }}>
+              <Form.Check
+                type={"radio"}
+                label={`$500`}
+                checked={amount === "500"}
+                onChange={() => setAmount("500")}
+              />
             </Col>
           </Row>
+          <Row>
+            <Col sm={4} style={{ padding: 15 }}>
+              <Form.Check
+                type={"radio"}
+                label={`$1000`}
+                checked={amount === "1000"}
+                onChange={() => setAmount("1000")}
+              />
+            </Col>
+            <Col
+              sm={4}
+              style={{ padding: 15, display: "flex", flexDirection: "row" }}
+            >
+              <Form.Check
+                type={"radio"}
+                label={`Other`}
+                checked={amount === "other"}
+                onChange={() => setAmount("other")}
+              />
+              <input
+                type="number"
+                style={{ marginLeft: 10 }}
+                disabled={amount === "other" ? false : true}
+                onChange={(e) => setCustomAmount(e.target.value)}
+                value={customAmount}
+              />
+            </Col>
+          </Row>
+          {/* <Col sm={4} style={{ margin: "auto" }}>
+            <Paypal customAmount={customAmount} amount={amount} />
+          </Col> */}
+          <Paypal customAmount={customAmount} amount={amount} />
         </Container>
       </MyVerticallyCenteredModal>
     </>

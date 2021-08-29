@@ -27,7 +27,17 @@ function Footer() {
           margin: "auto",
         }}
       >
-        <a href={url} className="fa fa-facebook"></a>
+        <a
+          href={url}
+          style={{
+            borderRadius: "50%",
+            border: "1px solid gold",
+            padding: "8px 15px",
+          }}
+        >
+          {" "}
+          <i className="fa fa-facebook" aria-hidden="true"></i>{" "}
+        </a>
       </div>
       <div
         style={{
