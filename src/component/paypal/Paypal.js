@@ -36,7 +36,6 @@ function Paypal(props) {
     myButton.render(paypalRef.current);
 
     return () => {
-      console.log("unmounting?");
       myButton.close();
     };
   }, []);
