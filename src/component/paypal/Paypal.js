@@ -34,7 +34,6 @@ function Paypal(props) {
   }
 
   function onApprove(data, actions) {
-    console.log(data, "<-0-0-0-0-0what is data?");
     console.log(actions, "<-0-0-0-0-0what is actions?");
     // return actions.order.capture().then(function (details) {
     //   setOnApproveMessage(
