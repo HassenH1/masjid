@@ -34,7 +34,6 @@ function Paypal(props) {
   }
 
   function onApprove(data, actions) {
-    console.log(actions, "<-0-0-0-0-0what is actions?");
     // return actions.order.capture().then(function (details) {
     //   setOnApproveMessage(
     //     `Transaction completed by ${details.payer.name.given_name}!`
