@@ -3,14 +3,6 @@ import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { Container } from "react-bootstrap";
 
 function Paypal(props) {
-  const initialOptions = {
-    "client-id": "test",
-    currency: "USD",
-    intent: "capture",
-    "data-client-token":
-      "AXMahTmR0JckXdm5Xu3wFfnQKy2fI-iobom9GM1M9zg2wBDNrpYqO31iuXuS6PDRsy_vAWaSzy7ZauYC",
-  };
-
   const [amount, setAmount] = useState("2.00");
   const [orderID, setOrderID] = useState("");
   const [onApproveMessage, setOnApproveMessage] = useState("");
@@ -59,8 +51,6 @@ function Paypal(props) {
         options={{
           "client-id": "test",
           currency: "USD",
-          // "data-client-token":
-          //   "AXMahTmR0JckXdm5Xu3wFfnQKy2fI-iobom9GM1M9zg2wBDNrpYqO31iuXuS6PDRsy_vAWaSzy7ZauYC",
         }}
       >
         <PayPalButtons
