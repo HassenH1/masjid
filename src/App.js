@@ -10,20 +10,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <>
-      <div className="body">
-        <Navbar />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/about">
-            <About />
-          </Route>
-          <Route path="/donate">
-            <Donate />
-          </Route>
-        </Switch>
-      </div>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/about">
+          <About />
+        </Route>
+        <Route path="/donate">
+          <Donate />
+        </Route>
+      </Switch>
       <Footer />
     </>
   );

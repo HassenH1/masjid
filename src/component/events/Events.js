@@ -14,6 +14,48 @@ function Events({ today, options }) {
       desc: "hello world",
       image: "some image",
     },
+    {
+      title: "Hello world",
+      timeTense: "once",
+      desc: "this is a test here",
+      image: "no image today",
+    },
+    {
+      title: "Hello world",
+      timeTense: "once",
+      desc: "this is a test here",
+      image: "no image today",
+    },
+    {
+      title: "Hello world",
+      timeTense: "once",
+      desc: "this is a test here",
+      image: "no image today",
+    },
+    {
+      title: "Hello world",
+      timeTense: "once",
+      desc: "this is a test here",
+      image: "no image today",
+    },
+    {
+      title: "Hello world",
+      timeTense: "once",
+      desc: "this is a test here",
+      image: "no image today",
+    },
+    {
+      title: "Hello world",
+      timeTense: "once",
+      desc: "this is a test here",
+      image: "no image today",
+    },
+    {
+      title: "Hello world",
+      timeTense: "once",
+      desc: "this is a test here",
+      image: "no image today",
+    },
   ];
 
   return (

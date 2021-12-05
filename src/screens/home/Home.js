@@ -40,45 +40,41 @@ function Home() {
             height: "500px",
           }}
         >
-          <div
+          {/* <div
             className="mask"
-            style={{ backgroundColor: "rgba(0, 0, 0, 0.1)", height: "100%" }}
-          >
-            <div className="d-flex justify-content-start align-items-start h-100 flex-column w-100">
-              <div className="flex-column d-flex justify-content-end align-items-end h-100">
-                <div className="text-center ms-3">
-                  <h4 className="text-uppercase text-white">
-                    Download our App
-                  </h4>
-                  <div className="buttons justify-content-center mt-3 mb-3">
-                    {" "}
-                    <a href="https://apps.apple.com/us/app/quran-qaidah-level-1/id1536581660">
-                      <button
-                        className="btn btn-dark app-button"
-                        style={{ border: "1px solid #639aaf" }}
-                      >
-                        <i className="fa fa-apple fa-2x me-3 align-middle"></i>
-                        <span className="text-uppercase ml-2 align-middle">
-                          Apple store
-                        </span>
-                      </button>
-                    </a>{" "}
-                    <a href="https://play.google.com/store/apps/details?id=air.com.fatima.quranqaidah1">
-                      <button
-                        className="btn btn-dark app-button"
-                        style={{ border: "1px solid #639aaf" }}
-                      >
-                        <i className="fa fa-play fa-2x me-3 align-middle"></i>
-                        <span className="text-uppercase ml-2 align-middle">
-                          Google store
-                        </span>
-                      </button>
-                    </a>{" "}
-                  </div>
-                </div>
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 0.1)",
+              height: "100%",
+              border: "1px solid red",
+              margin: "0 auto",
+            }}
+          > */}
+          <div className="h-auto w-50 mx-auto ">
+            <h4 className="text-uppercase text-white">Download our App</h4>
+            <div className="row gap-1">
+              <div className="col-lg">
+                <a href="https://apps.apple.com/us/app/quran-qaidah-level-1/id1536581660">
+                  <button className="btn btn-dark app-button">
+                    <i className="fa fa-apple fa-2x me-3 align-middle"></i>
+                    <span className="text-uppercase ml-2 align-middle">
+                      Apple store
+                    </span>
+                  </button>
+                </a>
+              </div>
+              <div className="col-lg">
+                <a href="https://play.google.com/store/apps/details?id=air.com.fatima.quranqaidah1">
+                  <button className="btn btn-dark app-button">
+                    <i className="fa fa-play fa-2x me-3 align-middle"></i>
+                    <span className="text-uppercase ml-2 align-middle">
+                      Google store
+                    </span>
+                  </button>
+                </a>
               </div>
             </div>
           </div>
+          {/* </div> */}
         </div>
       </div>
 
