@@ -49,6 +49,8 @@ function Footer() {
         }}
       >
         15012 Prairie Ave Suite A, Hawthorne CA, 90250
+        <br />
+        Call: (480) 621-0096
       </div>
     </div>
   );

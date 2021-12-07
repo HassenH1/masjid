@@ -6,6 +6,8 @@ import Events from "../../component/events/Events";
 import Services from "../../component/services/Services";
 import QuickHadith from "../../component/quickhadith/QuickHadith";
 
+import FRONT from "../../assets/masjidfront (2).jpg";
+
 function Home() {
   const today = new Date();
   const options = {
@@ -32,23 +34,59 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <div className="containercustom d-flex justify-content-center">
+    <>
+      {/* <div> */}
+      <img src={FRONT} className="d-block w-100" alt="..." />
+      {/* </div> */}
+
+      <div className="container">
+        <Title title="Quick Hadith" />
+
+        {!hadith ? <Loading /> : <QuickHadith hadith={hadith} />}
+
+        <Title title="Program Schedule" />
+
+        {/* <div className="container d-flex flex-row p-0">
+          <div className="wrapper2 w-100 text-center">
+            <div className="prayer-time">
+              <Title title="Prayer Times" textColor="white" />
+              <PrayerSchedule today={today} options={options} />
+            </div>
+            <div className="upcoming-event">
+              <Title title="Events" fontSize={22} />
+              <Events today={today} options={options} />
+            </div>
+          </div>
+        </div> */}
+        <div className="row">
+          <div className="col-lg">
+            <Title title="Prayer Times" fontSize={22} />
+            {/* <Title title="Prayer Times" textColor="white" /> */}
+            <PrayerSchedule today={today} options={options} />
+          </div>
+          <div className="col-lg">
+            <Title title="Events" fontSize={22} />
+            <Events today={today} options={options} />
+          </div>
+        </div>
+
+        <Title title="Our Service" />
+        <Services />
+      </div>
+    </>
+  );
+}
+
+export default Home;
+
+{
+  /* <div className="containercustom d-flex justify-content-center">
         <div
           className="text-center bg-image w-100"
           style={{
             height: "500px",
           }}
         >
-          {/* <div
-            className="mask"
-            style={{
-              backgroundColor: "rgba(0, 0, 0, 0.1)",
-              height: "100%",
-              border: "1px solid red",
-              margin: "0 auto",
-            }}
-          > */}
           <div className="h-auto w-50 mx-auto ">
             <h4 className="text-uppercase text-white">Download our App</h4>
             <div className="row gap-1">
@@ -74,33 +112,6 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* </div> */}
         </div>
-      </div>
-
-      <Title title="Quick Hadith" marginStyle={0} />
-
-      {!hadith ? <Loading /> : <QuickHadith hadith={hadith} />}
-
-      <Title title="Program Schedule" />
-
-      <div className="container d-flex flex-row p-0">
-        <div className="wrapper2 w-100 text-center">
-          <div className="prayer-time">
-            <Title title="Prayer Times" textColor="white" />
-            <PrayerSchedule today={today} options={options} />
-          </div>
-          <div className="upcoming-event">
-            <Title title="Events" fontSize={22} />
-            <Events today={today} options={options} />
-          </div>
-        </div>
-      </div>
-
-      <Title title="Our Service" />
-      <Services />
-    </div>
-  );
+      </div> */
 }
-
-export default Home;

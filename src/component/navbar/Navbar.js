@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Row, Col, Form } from "react-bootstrap";
 import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
 import Paypal from "../paypal/Paypal";
@@ -17,66 +16,72 @@ const NavbarComponent = () => {
 
   return (
     <>
-      <Navbar
-        collapseOnSelect
-        expand="lg"
-        bg="light"
-        variant="light"
-        className="me-3"
+      <nav
+        className="navbar navbar-expand-lg navbar-light"
+        style={{ backgroundColor: "#3f467c" }}
       >
-        <Navbar.Brand className="ms-3">Masjid Faatimah</Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link>
-              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
-                Home
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link
-                to="/about"
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                About Us
-              </Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/" style={{ textDecoration: "none", color: "black" }}>
-                Our Services
-              </Link>
-            </Nav.Link>
-            <span className="nav-link">
-              <a
-                href="https://www.gofundme.com/f/masjidfaatimah2021"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ textDecoration: "none", color: "black" }}
-              >
-                Gofundme
-              </a>
-            </span>
-            <span
-              className="nav-link"
-              onClick={() => setModal(!modal)}
-              style={{ cursor: "pointer" }}
-            >
-              <span
-                style={{
-                  border: "1px solid green",
-                  paddingLeft: "10px",
-                  paddingRight: "10px",
-                  paddingTop: "3px",
-                  paddingBottom: "3px",
-                  borderRadius: 25,
-                }}
-              >
-                Donate
-              </span>
-            </span>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+        <div className="container-fluid">
+          <a className="navbar-brand text-white" href="/">
+            Masjid Faatimah
+          </a>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link text-white" aria-current="page" href="/">
+                  Home
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="/about">
+                  About
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="/services">
+                  Services
+                </a>
+              </li>
+              <li className="nav-item">
+                <a
+                  className="nav-link text-white"
+                  href="https://www.gofundme.com/f/masjidfaatimah2021"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GoFundMe
+                </a>
+              </li>
+              <li className="nav-item">
+                <span
+                  className="nav-link"
+                  onClick={() => setModal(!modal)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <span
+                    style={{
+                      color: "white",
+                    }}
+                  >
+                    Donate
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <MyVerticallyCenteredModal
         show={modal}
         onHide={() => setModal(!modal)}
@@ -164,9 +169,6 @@ const NavbarComponent = () => {
               />
             </Col>
           </Row>
-          {/* <Col sm={4} style={{ margin: "auto" }}>
-            <Paypal customAmount={customAmount} amount={amount} />
-          </Col> */}
           <Paypal customAmount={customAmount} amount={amount} />
         </Container>
       </MyVerticallyCenteredModal>
