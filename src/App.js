@@ -1,4 +1,5 @@
 import { Switch, Route } from "react-router-dom";
+
 import Navbar from "./component/navbar/Navbar";
 import Home from "./screens/home/Home";
 import About from "./screens/about/About";

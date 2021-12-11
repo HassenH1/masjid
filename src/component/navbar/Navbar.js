@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Navbar, Nav, Container, Row, Col, Form } from "react-bootstrap";
+import { Container, Row, Col, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
 import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
 import Paypal from "../paypal/Paypal";
 
@@ -38,19 +40,28 @@ const NavbarComponent = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link text-white" aria-current="page" href="/">
+                {/* <a className="nav-link text-white" aria-current="page" href="/">
                   Home
-                </a>
+                </a> */}
+                <Link className="nav-link text-white" to="/">
+                  Home
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="/about">
+                {/* <a className="nav-link text-white" href="/about">
                   About
-                </a>
+                </a> */}
+                <Link className="nav-link text-white" to="/about">
+                  About us
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-white" href="/services">
+                {/* <a className="nav-link text-white" href="/services">
                   Services
-                </a>
+                </a> */}
+                <Link className="nav-link text-white" to="/services">
+                  Services
+                </Link>
               </li>
               <li className="nav-item">
                 <a
