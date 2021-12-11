@@ -1,8 +1,11 @@
 import React from "react";
+import Title from "../../component/title/Title";
 
 function QuickHadith({ hadith }) {
   return (
     <>
+      <Title title="Quick Hadith" />
+
       <div
         className="col-lg"
         dangerouslySetInnerHTML={{

@@ -1,4 +1,4 @@
-html {
+/* html {
   margin: 0 auto;
 }
 
@@ -11,6 +11,16 @@ html {
 }
 
 #root {
-  /* background-color: black; */
+  background-color: #fcfdf8;
+} */
+
+html {
+  margin: 0 auto;
+}
+
+body,
+html {
+  font-family: "Vazir", sans-serif;
+  max-width: 1500px;
   background-color: #fcfdf8;
 }
