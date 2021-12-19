@@ -4,6 +4,7 @@ import Navbar from "./component/navbar/Navbar";
 import Home from "./screens/home/Home";
 import About from "./screens/about/About";
 import Donate from "./screens/donate/Donate";
+import Services from "./screens/services/Services";
 import Footer from "./component/footer/Footer";
 
 import "./App.css";
@@ -22,6 +23,9 @@ function App() {
         </Route>
         <Route path="/donate">
           <Donate />
+        </Route>
+        <Route path="/services">
+          <Services />
         </Route>
       </Switch>
       <Footer />
