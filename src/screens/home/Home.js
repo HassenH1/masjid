@@ -16,10 +16,15 @@ function Home() {
       <Header />
 
       <div className="container">
+        {/* <div
+          className="row border border-danger"
+          style={{ background: "#EDBFCC" }}
+        >
+          <p>Hello world</p>
+        </div> */}
         {!hadith ? <Loading /> : <QuickHadith hadith={hadith} />}
 
         <Title title="Program Schedule" />
-
         <div className="row">
           <div className="col-lg">
             <Title title="Prayer Times" fontSize={22} />
