@@ -1,21 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Form } from "react-bootstrap";
+import React from "react";
 import { Link } from "react-router-dom";
-
-import MyVerticallyCenteredModal from "../modal/MyVerticallyCenteredModal";
-import Paypal from "../paypal/Paypal";
+import { getRandomCharityQuote } from "../../data/data";
 
 const NavbarComponent = () => {
-  const [modal, setModal] = useState(false);
-  const [amount, setAmount] = useState();
-  const [customAmount, setCustomAmount] = useState();
-
-  useEffect(() => {
-    if (customAmount !== "" && amount !== "other") {
-      setCustomAmount("");
-    }
-  }, [amount]);
-
   return (
     <>
       <nav
@@ -80,22 +67,20 @@ const NavbarComponent = () => {
                     <input
                       type="hidden"
                       name="item_name"
-                      value="The Prophet Muhammad(SAW) said: 'The believer's shade on the Day of Resurrection will be his charity' - Al-Tirmidhi, Hadith 604"
+                      value={getRandomCharityQuote()}
                     />
                     <input type="hidden" name="currency_code" value="USD" />
-                    <input
-                      type="button"
-                      name="submit"
-                      title="PayPal - The safer, easier way to pay online!"
-                      alt="Donate"
+                    <button
+                      type="submit"
                       style={{
                         background: "#FFCC00",
                         borderRadius: "25px",
                         paddingLeft: "15px",
                         paddingRight: "15px",
                       }}
-                      value="Donate"
-                    ></input>
+                    >
+                      Donate
+                    </button>
                   </form>
                 </span>
               </li>

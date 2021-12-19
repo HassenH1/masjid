@@ -25,7 +25,7 @@ function Services(props) {
   };
 
   const renderCards = currentServices.map((card, index) => (
-    <div className="card text-center w-full position-relative">
+    <div className="card text-center w-full position-relative" key={index}>
       <img
         src={card.img}
         className="card-img-top"

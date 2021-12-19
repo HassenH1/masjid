@@ -24,3 +24,21 @@ export const currentServices = [
     type: "Eid Salat",
   },
 ];
+
+export const charityQuotes = [
+  {
+    quote:
+      "The Prophet Muhammad(SAW) said: 'The believer's shade on the Day of Resurrection will be his charity' - Al-Tirmidhi, Hadith 604",
+  },
+  {
+    quote:
+      "The Prophet(SAW) said: 'Give charity without delay, for it stands in the way of calamity.' (Al-Tirmidhi)",
+  },
+  {
+    quote:
+      "Allah, the Exalted, says, 'Spend, O son of Adam, and I shall spend on you.' – Prophet Muhammad, upon him be peace (Al-Bukhari and Muslim).",
+  },
+];
+
+export const getRandomCharityQuote = () =>
+  charityQuotes[Math.floor(Math.random() * charityQuotes.length)].quote;
