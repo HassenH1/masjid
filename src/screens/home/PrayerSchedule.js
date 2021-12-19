@@ -1,8 +1,10 @@
 import React from "react";
+import { useData } from "../../context/data-context";
 
-function PrayerSchedule({ today, options }) {
+function PrayerSchedule() {
+  const { today, options } = useData();
   return (
-    <div className="p-5" style={{ background: "#3f467c" }}>
+    <div className="p-5" style={{ background: "#2B59C3" }}>
       <table
         className="mx-auto my-5 p-5 w-100 text-center"
         style={{ background: "white" }}

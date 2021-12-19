@@ -9,7 +9,7 @@ function Title({ title, textColor, marginStyle, fontSize }) {
           justifyContent: "center",
           alignItems: "center",
           letterSpacing: 3,
-          fontWeight: 50,
+          fontWeight: 250,
           fontSize: fontSize ? fontSize : 32,
         }}
       >
@@ -24,7 +24,7 @@ function Title({ title, textColor, marginStyle, fontSize }) {
           marginBottom: marginStyle ? marginStyle : 32,
         }}
       >
-        <hr />
+        <hr style={{ background: "#D36582" }} />
       </div>
     </>
   );

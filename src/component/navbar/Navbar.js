@@ -20,9 +20,9 @@ const NavbarComponent = () => {
     <>
       <nav
         className="navbar navbar-expand-lg navbar-light"
-        style={{ backgroundColor: "#3f467c" }}
+        style={{ backgroundColor: "#253C78" }}
       >
-        <div className="container-fluid">
+        <div className="container">
           <a className="navbar-brand text-white" href="/">
             Masjid Faatimah
           </a>
@@ -38,7 +38,7 @@ const NavbarComponent = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            <ul className="navbar-nav ms-auto">
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/">
                   Home

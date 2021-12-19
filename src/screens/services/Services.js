@@ -2,7 +2,7 @@ import React from "react";
 import Title from "../../component/title/Title";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { data } from "../../data/data";
+import { currentServices } from "../../data/data";
 
 function Services(props) {
   const responsive = {
@@ -24,17 +24,19 @@ function Services(props) {
     },
   };
 
-  const renderCards = data.map((card, index) => (
-    <div className="card text-center border-0 w-full">
+  const renderCards = currentServices.map((card, index) => (
+    <div className="card text-center w-full position-relative">
       <img
         src={card.img}
         className="card-img-top"
         alt=""
         style={{ width: "100%", height: "15vw", objectFit: "cover" }}
       />
-      <p className="text-muted lead" style={{ fontSize: "1.5em" }}>
-        {card.type}
-      </p>
+      {/* <div className="position-absolute top-0 text-white">
+        <p>Hello world</p>
+      </div> */}
+      <p className="text-muted lead">{card.type}</p>
+      {/* <p className="text-muted lead" style={{ fontSize: "1.5em" }}> */}
     </div>
   ));
 

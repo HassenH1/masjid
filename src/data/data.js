@@ -1,4 +1,4 @@
-export const data = [
+export const currentServices = [
   {
     img: "https://www.islamicfinder.org/news/preview-thumbnail/post646_thumb_20211124_072050.png/646",
     type: "5x Daily Prayers",
