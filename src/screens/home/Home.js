@@ -4,7 +4,7 @@ import Loading from "../../component/loading/Loading";
 import Title from "../../component/title/Title";
 import PrayerSchedule from "./PrayerSchedule";
 import Events from "./Events";
-import Services from "../services/Services";
+import CurrentServices from "./CurrentServices";
 import QuickHadith from "./QuickHadith";
 import { useData } from "../../context/data-context";
 
@@ -16,14 +16,7 @@ function Home() {
       <Header />
 
       <div className="container">
-        {/* <div
-          className="row border border-danger"
-          style={{ background: "#EDBFCC" }}
-        >
-          <p>Hello world</p>
-        </div> */}
         {!hadith ? <Loading /> : <QuickHadith hadith={hadith} />}
-
         <Title title="Program Schedule" />
         <div className="row">
           <div className="col-lg">
@@ -35,8 +28,7 @@ function Home() {
             <Events />
           </div>
         </div>
-
-        <Services />
+        <CurrentServices />
       </div>
     </>
   );
