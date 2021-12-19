@@ -65,109 +65,44 @@ const NavbarComponent = () => {
                 </a>
               </li>
               <li className="nav-item">
-                <span
-                  className="nav-link"
-                  onClick={() => setModal(!modal)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <span className="text-white">Donate</span>
+                <span className="nav-link">
+                  <form
+                    action="https://www.paypal.com/donate"
+                    method="post"
+                    target="_top"
+                  >
+                    <input
+                      type="hidden"
+                      name="business"
+                      value="BHGM3ZDC7SGCU"
+                    />
+                    <input type="hidden" name="no_recurring" value="0" />
+                    <input
+                      type="hidden"
+                      name="item_name"
+                      value="The Prophet Muhammad(SAW) said: 'The believer's shade on the Day of Resurrection will be his charity' - Al-Tirmidhi, Hadith 604"
+                    />
+                    <input type="hidden" name="currency_code" value="USD" />
+                    <input
+                      type="button"
+                      name="submit"
+                      title="PayPal - The safer, easier way to pay online!"
+                      alt="Donate"
+                      style={{
+                        background: "#FFCC00",
+                        borderRadius: "25px",
+                        paddingLeft: "15px",
+                        paddingRight: "15px",
+                      }}
+                      value="Donate"
+                    ></input>
+                  </form>
                 </span>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-
-      <MyVerticallyCenteredModal
-        show={modal}
-        onHide={() => setModal(!modal)}
-        title={"Donate"}
-        heading={"none"}
-      >
-        <Container fluid className="px-5">
-          <Row>
-            <Col sm style={{ padding: 15 }}>
-              <Form.Check
-                type={"radio"}
-                label={`$25`}
-                checked={amount === "25"}
-                onChange={(e) => setAmount("25")}
-              />
-            </Col>
-            <Col sm style={{ padding: 15 }}>
-              <Form.Check
-                type={"radio"}
-                label={`$50`}
-                checked={amount === "50"}
-                onChange={() => setAmount("50")}
-              />
-            </Col>
-            <Col sm style={{ padding: 15 }}>
-              <Form.Check
-                type={"radio"}
-                label={`$100`}
-                checked={amount === "100"}
-                onChange={() => setAmount("100")}
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col sm style={{ padding: 15 }}>
-              <Form.Check
-                type={"radio"}
-                label={`$200`}
-                checked={amount === "200"}
-                onChange={() => setAmount("200")}
-              />
-            </Col>
-            <Col sm={4} style={{ padding: 15 }}>
-              <Form.Check
-                type={"radio"}
-                label={`$250`}
-                checked={amount === "250"}
-                onChange={() => setAmount("250")}
-              />
-            </Col>
-            <Col sm={4} style={{ padding: 15 }}>
-              <Form.Check
-                type={"radio"}
-                label={`$500`}
-                checked={amount === "500"}
-                onChange={() => setAmount("500")}
-              />
-            </Col>
-          </Row>
-          <Row>
-            <Col sm={4} style={{ padding: 15 }}>
-              <Form.Check
-                type={"radio"}
-                label={`$1000`}
-                checked={amount === "1000"}
-                onChange={() => setAmount("1000")}
-              />
-            </Col>
-            <Col
-              sm={4}
-              style={{ padding: 15, display: "flex", flexDirection: "row" }}
-            >
-              <Form.Check
-                type={"radio"}
-                label={`Other`}
-                checked={amount === "other"}
-                onChange={() => setAmount("other")}
-              />
-              <input
-                type="number"
-                style={{ marginLeft: 10 }}
-                disabled={amount === "other" ? false : true}
-                onChange={(e) => setCustomAmount(e.target.value)}
-                value={customAmount}
-              />
-            </Col>
-          </Row>
-          <Paypal customAmount={customAmount} amount={amount} />
-        </Container>
-      </MyVerticallyCenteredModal>
     </>
   );
 };
