@@ -37,7 +37,7 @@ function CurrentServices(props) {
   ));
 
   return (
-    <>
+    <div id="services">
       <Title title="Our Service" />
 
       <Carousel
@@ -57,7 +57,7 @@ function CurrentServices(props) {
       >
         {renderCards}
       </Carousel>
-    </>
+    </div>
   );
 }
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { getRandomCharityQuote } from "../../data/data";
 
 const NavbarComponent = () => {
@@ -30,19 +29,21 @@ const NavbarComponent = () => {
                 <a className="nav-link text-white" href="#home">
                   Home
                 </a>
-                {/* <Link className="nav-link text-white" to="/">
-                  Home
-                </Link> */}
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/about">
+                <a className="nav-link text-white" href="#aboutus">
                   About us
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/services">
+                <a className="nav-link text-white" href="#programschedule">
+                  Programs
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link text-white" href="#services">
                   Services
-                </Link>
+                </a>
               </li>
               <li className="nav-item">
                 <a

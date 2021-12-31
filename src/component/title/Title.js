@@ -2,7 +2,7 @@ import React from "react";
 
 function Title({ title, textColor, marginStyle, fontSize }) {
   return (
-    <>
+    <div>
       <div
         style={{
           display: "flex",
@@ -26,7 +26,7 @@ function Title({ title, textColor, marginStyle, fontSize }) {
       >
         <hr style={{ background: "#D36582" }} />
       </div>
-    </>
+    </div>
   );
 }
 
