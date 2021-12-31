@@ -27,9 +27,12 @@ const NavbarComponent = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link text-white" to="/">
+                <a className="nav-link text-white" href="#home">
                   Home
-                </Link>
+                </a>
+                {/* <Link className="nav-link text-white" to="/">
+                  Home
+                </Link> */}
               </li>
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/about">
@@ -51,7 +54,7 @@ const NavbarComponent = () => {
                   GoFundMe
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <span className="nav-link">
                   <form
                     action="https://www.paypal.com/donate"
@@ -83,7 +86,7 @@ const NavbarComponent = () => {
                     </button>
                   </form>
                 </span>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
