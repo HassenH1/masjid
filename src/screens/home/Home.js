@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Loading from "../../component/loading/Loading";
 import CurrentServices from "./CurrentServices";
-import About from "../about/About";
+import About from "./About";
 import DownloadOurApp from "./DownloadOurApp";
 import ProgramsAndSchedules from "./ProgramsAndSchedules";
 import GoToTop from "./GoToTop";
