@@ -2,18 +2,18 @@ import React from "react";
 
 function Title({ title, textColor, marginStyle, fontSize }) {
   return (
-    <div>
+    <>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          letterSpacing: 3,
           fontWeight: 250,
           fontSize: fontSize ? fontSize : 32,
+          marginTop: 35,
         }}
       >
-        <p style={{ marginTop: 32, marginBottom: 0, color: textColor }}>
+        <p style={{ marginBottom: 0, color: textColor }} className="display-6">
           {title}
         </p>
       </div>
@@ -26,7 +26,7 @@ function Title({ title, textColor, marginStyle, fontSize }) {
       >
         <hr style={{ background: "#D36582" }} />
       </div>
-    </div>
+    </>
   );
 }
 
