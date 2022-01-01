@@ -8,6 +8,7 @@ import ProgramsAndSchedules from "./ProgramsAndSchedules";
 import GoToTop from "./GoToTop";
 import QuickHadith from "./QuickHadith";
 import { useData } from "../../context/data-context";
+import Map from "./Map";
 
 function Home() {
   const { hadith } = useData();
@@ -21,6 +22,7 @@ function Home() {
         <About />
         <ProgramsAndSchedules />
         <CurrentServices />
+        <Map />
       </div>
       <GoToTop />
     </>

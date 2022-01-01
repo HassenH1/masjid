@@ -19,7 +19,6 @@ function Events() {
           height: "440px",
           scrollbarWidth: "thin",
         }}
-        // className="text-center overflow-y-auto border border-danger"
       >
         {events.map((each, index) => {
           return (
@@ -68,6 +67,8 @@ function Events() {
         })}
       </div>
       <MyVerticallyCenteredModal
+        title="none"
+        heading="none"
         show={modal.modal}
         details={modal.details}
         onHide={() =>
@@ -76,7 +77,7 @@ function Events() {
             modal: false,
           })
         }
-      />
+      ></MyVerticallyCenteredModal>
     </>
   );
 }

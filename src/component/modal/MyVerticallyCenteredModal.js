@@ -27,16 +27,14 @@ function MyVerticallyCenteredModal(props) {
           ) : props.heading === "none" ? null : (
             <h4>Centered Modal</h4>
           )}
-          {/* {props.body && props.body !== "none" ? (
-            props.body
-          ) : props.body === "none" ? null : (
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.
-            </p>
-          )} */}
-          {props.children}
+          <div className="row">
+            {props.image && (
+              <>
+                <div className="col-lg-5 border">test</div>
+                <div className="col-lg border border-danger">test</div>
+              </>
+            )}
+          </div>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={props.onHide}>Close</Button>
