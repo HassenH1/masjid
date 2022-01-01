@@ -10,7 +10,7 @@ function Map() {
         <img
           src={MasjidLocation}
           className="img-fluid rounded-3"
-          style={{ boxShadow: "-4px -3px 45px 21px rgba(0,0,0,0.2)" }}
+          style={{ boxShadow: "-3px -3px 15px 1px rgba(0,0,0,0.2)" }}
           alt="..."
         />
       </div>

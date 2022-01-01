@@ -5,6 +5,18 @@ import "react-multi-carousel/lib/styles.css";
 import { currentServices } from "../../data/data";
 
 function CurrentServices(props) {
+  const renderCards = currentServices.map((card, index) => (
+    <div className="card text-center w-full position-relative" key={index}>
+      <img
+        src={card.img}
+        className="card-img-top"
+        alt=""
+        style={{ width: "100%", height: "15vw", objectFit: "cover" }}
+      />
+      <p className="text-muted lead">{card.type}</p>
+    </div>
+  ));
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -23,18 +35,6 @@ function CurrentServices(props) {
       partialVisibilityGutter: 50,
     },
   };
-
-  const renderCards = currentServices.map((card, index) => (
-    <div className="card text-center w-full position-relative" key={index}>
-      <img
-        src={card.img}
-        className="card-img-top"
-        alt=""
-        style={{ width: "100%", height: "15vw", objectFit: "cover" }}
-      />
-      <p className="text-muted lead">{card.type}</p>
-    </div>
-  ));
 
   return (
     <div id="services">

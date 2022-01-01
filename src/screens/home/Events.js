@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import MyVerticallyCenteredModal from "../../component/modal/MyVerticallyCenteredModal";
 import { useData } from "../../context/data-context";
+import MyModal from "../../component/modal/MyModal";
+import useModal from "../../hooks/useModal";
 
 function Events() {
   const { events } = useData();
-  const [modal, setModal] = useState({
-    modal: false,
-    details: null,
-  });
+  const { show, toggle } = useModal();
+  const [modalDetails, setModalDetails] = useState("");
+
+  const onPressMoreDetails = (eventIndex) => {
+    setModalDetails(events[eventIndex]);
+    toggle();
+  };
 
   return (
     <>
@@ -49,12 +53,7 @@ function Events() {
                     <div className="widget-49-meeting-action mt-3">
                       <Button
                         variant="primary"
-                        onClick={() =>
-                          setModal({
-                            modal: true,
-                            details: each,
-                          })
-                        }
+                        onClick={() => onPressMoreDetails(index)}
                       >
                         More details...
                       </Button>
@@ -66,18 +65,13 @@ function Events() {
           );
         })}
       </div>
-      <MyVerticallyCenteredModal
+      <MyModal
         title="none"
         heading="none"
-        show={modal.modal}
-        details={modal.details}
-        onHide={() =>
-          setModal({
-            details: null,
-            modal: false,
-          })
-        }
-      ></MyVerticallyCenteredModal>
+        show={show}
+        details={modalDetails}
+        onHide={toggle}
+      ></MyModal>
     </>
   );
 }

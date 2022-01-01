@@ -23,6 +23,30 @@ export const currentServices = [
     img: "https://media.premiumtimesng.com/wp-content/files/2015/12/mosque-prayer.jpg",
     type: "Eid Salat",
   },
+  {
+    img: "https://i2.wp.com/riwaqalazhar.com/wp-content/uploads/2020/06/Quran-for-Kids-1.jpg",
+    type: "Daily Kids Quran Class",
+  },
+  {
+    img: "https://i1.wp.com/www.ilmgate.org/wp-content/uploads/2014/01/hifz-e-quran.jpg",
+    type: "Morning Hifz Class",
+  },
+  {
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx1K4IWxODOxkUYO1SIsEJFVYC7F4G-q5-BiwR5wKINZVErjcZvwWsn__meCkvWZoGD6E&usqp=CAU",
+    type: "Beginner Arabic Class",
+  },
+  {
+    img: "https://firdawsacademy.com/wp-content/uploads/2018/09/image20180911185314.jpg.webp",
+    type: "Basic Islamic Studies",
+  },
+  {
+    img: "https://www.almahdi.us/wp-content/uploads/2021/03/shahadda.png",
+    type: "Shahada Ceremony",
+  },
+  {
+    img: "https://images.indianexpress.com/2017/06/nikah-759.jpg?w=759&h=422&imflag=true",
+    type: "Nikah Marriage",
+  },
 ];
 
 export const charityQuotes = [
