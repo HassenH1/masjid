@@ -8,10 +8,8 @@ function PrayerSchedule() {
     <>
       <Title title="Prayer Times" fontSize={22} />
       <div
-        // className="px-5 py-4"
         style={{
           background: "#2B59C3",
-          // border: "1px solid red",
           padding: "10px 10px",
           height: "72%",
           margin: "auto",
@@ -19,13 +17,10 @@ function PrayerSchedule() {
           alignItems: "center",
           display: "flex",
           justifyContent: "center",
-          alignItems: "center",
         }}
       >
-        {/* <div className="p-5" style={{ background: "#2B59C3" }}> */}
         <table
           className="h-100 w-100 text-center"
-          // className="mx-auto my-auto w-100 text-center"
           style={{ background: "white" }}
         >
           <tbody>
