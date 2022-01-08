@@ -3,6 +3,7 @@ import { Button } from "react-bootstrap";
 import { useData } from "../../context/data-context";
 import MyModal from "../../component/modal/MyModal";
 import useModal from "../../hooks/useModal";
+import Title from "../../component/title/Title";
 
 function Events() {
   const { events } = useData();
@@ -16,6 +17,8 @@ function Events() {
 
   return (
     <>
+      <Title title="Events" fontSize={22} />
+
       <div
         style={{
           textAlign: "center",
