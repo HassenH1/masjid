@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import Madrash from "./../assets/madrash.png";
 
 const DataContext = createContext();
 
@@ -6,22 +7,16 @@ function DataProvider({ children }) {
   const [hadith, setHadith] = useState("");
   const [events, setEvents] = useState([
     {
-      title: "Daily Quran Classes",
-      timeTense: "Recurring event",
-      desc: "hello world",
-      image:
-        "https://images.unsplash.com/photo-1607296393394-6e25d0fc15cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2618&q=80",
+      title: "Taraweeh Prayer",
+      timeTense: "Every night",
+      clock: "starts at 8:30pm",
     },
     {
-      title: "Testing another one",
-      timeTense: "test event",
-      desc: "hello world",
-      image: "some image",
-    },
-    {
-      title: "Testing another two",
-      timeTense: "test event",
-      desc: "hello world",
+      title: "Kids Daily Quran Classes",
+      timeTense: "Currently on Spring Break",
+      image: Madrash,
+      clock: "4:00pm to 6:00pm o'clock",
+      dayOfWeek: "Monday thru Thursday",
     },
   ]);
   const today = new Date();

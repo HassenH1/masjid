@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 function MyModal(props) {
   return (
@@ -12,37 +12,34 @@ function MyModal(props) {
       >
         <Modal.Header closeButton></Modal.Header>
         <Modal.Body>
-          <div className="row">
-            {props.details.image ? (
-              <>
-                <div className="col-lg-5 border">
-                  <img
-                    src={props.details.image}
-                    alt="/./"
-                    height={"100%"}
-                    width={"100%"}
-                  />
-                  {/* <iframe
-                    className={"jpg"}
-                    width="100%"
-                    height="600"
-                    frameborder="0"
-                    src={`https://docs.google.com/gview?url=${file_url}&embedded=true`}
-                  ></iframe> */}
-                  {/* <iframe className={filetype} width="100%" height="600" frameborder="0" src={`https://docs.google.com/gview?url=${file_url}&embedded=true`}></iframe> */}
-                </div>
-                <div className="col-lg border border-danger">
-                  {props.details.title}
-                </div>
-              </>
-            ) : (
-              <div className="col-lg border">{props.details.title}</div>
-            )}
-          </div>
+          {props.details.image ? (
+            <>
+              <div className="col-lg-5">
+                <img
+                  src={props.details.image}
+                  alt="/./"
+                  height={"100%"}
+                  width={"100%"}
+                  style={{
+                    display: "block",
+                    maxWidth: "500px",
+                    maxHeight: "500px",
+                    height: "auto",
+                  }}
+                />
+              </div>
+              <div className="col-lg">
+                <p class="fs-2">{props.details.title}</p>
+                <p>{props.details.desc}</p>
+              </div>
+            </>
+          ) : (
+            <div className="col-lg">
+              <p class="fs-2 text-center">{props.details.title}</p>
+              <p>{props.details.desc}</p>
+            </div>
+          )}
         </Modal.Body>
-        {/* <Modal.Footer>
-        </Modal.Footer> */}
-        <Button onClick={props.onHide}>Close</Button>
       </Modal>
     </>
   );

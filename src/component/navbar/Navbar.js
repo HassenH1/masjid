@@ -1,5 +1,5 @@
 import React from "react";
-import { getRandomCharityQuote } from "../../data/data";
+import NavItem from "./NavItem";
 
 const NavbarComponent = () => {
   return (
@@ -25,26 +25,10 @@ const NavbarComponent = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
-              <li className="nav-item">
-                <a className="nav-link text-white" href="#home">
-                  Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="#aboutus">
-                  About us
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="#programschedule">
-                  Programs
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-white" href="#services">
-                  Services
-                </a>
-              </li>
+              <NavItem text="Home" href="home" />
+              <NavItem text="About us" href="aboutus" />
+              <NavItem text="Programs" href="programschedule" />
+              <NavItem text="Services" href="services" />
               <li className="nav-item">
                 <a
                   className="nav-link text-white"
@@ -57,35 +41,6 @@ const NavbarComponent = () => {
               </li>
               <li className="nav-item">
                 <span className="nav-link">
-                  {/* <form
-                    action="https://www.paypal.com/donate"
-                    method="post"
-                    target="_top"
-                  >
-                    <input
-                      type="hidden"
-                      name="business"
-                      value="BHGM3ZDC7SGCU"
-                    />
-                    <input type="hidden" name="no_recurring" value="0" />
-                    <input
-                      type="hidden"
-                      name="item_name"
-                      value={getRandomCharityQuote()}
-                    />
-                    <input type="hidden" name="currency_code" value="USD" />
-                    <button
-                      type="submit"
-                      style={{
-                        background: "#FFCC00",
-                        borderRadius: "25px",
-                        paddingLeft: "15px",
-                        paddingRight: "15px",
-                      }}
-                    >
-                      Donate
-                    </button>
-                  </form> */}
                   <form
                     action="https://www.paypal.com/donate"
                     method="post"

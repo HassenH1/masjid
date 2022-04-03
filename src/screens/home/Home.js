@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState, useCallback } from "react";
 import Header from "./Header";
 import Loading from "../../component/loading/Loading";
 import CurrentServices from "./CurrentServices";
@@ -9,32 +9,76 @@ import GoToTop from "./GoToTop";
 import QuickHadith from "./QuickHadith";
 import { useData } from "../../context/data-context";
 import Map from "./Map";
+import useModal from "../../hooks/useModal";
+import { Modal } from "react-bootstrap";
+import ReactCanvasConfetti from "react-canvas-confetti";
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const canvasStyles = {
+  position: "fixed",
+  pointerEvents: "none",
+  width: "100%",
+  height: "100%",
+  top: 0,
+  left: 0,
+  zIndex: 999,
+};
+
+function getAnimationSettings(originXA, originXB) {
+  return {
+    startVelocity: 30,
+    spread: 360,
+    ticks: 60,
+    zIndex: 999,
+    particleCount: 150,
+    origin: {
+      x: randomInRange(originXA, originXB),
+      y: Math.random() - 0.2,
+    },
+  };
+}
 
 function Home() {
+  const refAnimationInstance = useRef(null);
+  const [intervalId, setIntervalId] = useState();
+
   const { hadith } = useData();
+  const { show, toggle } = useModal(true);
 
-  // const [selectedFile, setSelectedFile] = useState();
+  useEffect(() => {
+    checkSessionStorage();
+  }, []);
 
-  // const changeHandler = (event) => {
-  //   setSelectedFile(event.target.files[0]);
-  // };
+  useEffect(() => {
+    if (show) startAnimation();
+  }, [show]);
 
-  // const handleSubmission = async (e) => {
-  //   e.preventDefault();
-  //   const formData = new FormData();
-  //   console.log(selectedFile, "<=-=-=-=selectedFile?");
-  //   formData.append("File", selectedFile);
-  //   try {
-  //     const resp = await fetch("http://localhost:4000/upload", {
-  //       method: "POST",
-  //       body: formData,
-  //     });
-  //     const data = await resp.json();
-  //     console.log(JSON.stringify(data, null, 2), "<=-=-=data?");
-  //   } catch (e) {
-  //     throw new Error(`cannot upload image`);
-  //   }
-  // };
+  const getInstance = useCallback((instance) => {
+    refAnimationInstance.current = instance;
+  }, []);
+
+  const startAnimation = useCallback(() => {
+    if (!intervalId) {
+      setIntervalId(setInterval(nextTickAnimation, 1500));
+    }
+  }, [intervalId]);
+
+  const nextTickAnimation = useCallback(() => {
+    if (refAnimationInstance.current) {
+      refAnimationInstance.current(getAnimationSettings(0.1, 0.3));
+      refAnimationInstance.current(getAnimationSettings(0.7, 0.9));
+    }
+  }, []);
+
+  const checkSessionStorage = () => {
+    const modalOpenedBefore = window.sessionStorage.getItem("test");
+    if (modalOpenedBefore) return;
+    toggle();
+    window.sessionStorage.setItem("test", "opened before");
+  };
 
   return (
     <>
@@ -42,27 +86,35 @@ function Home() {
       <DownloadOurApp />
       <div className="container" id="home">
         {!hadith ? <Loading /> : <QuickHadith hadith={hadith} />}
-        <div>
-          {/* <input type="file" name="file" onChange={changeHandler} />
-          <div>
-            <button onClick={handleSubmission}>Submit</button>
-          </div> */}
-          {/* <form onSubmit={handleSubmission}>
-            <input
-              type="file"
-              name="image"
-              accept="image/*"
-              onChange={changeHandler}
-            />
-            <button type="submit">Submit</button>
-          </form> */}
-        </div>
         <About />
         <ProgramsAndSchedules />
         <CurrentServices />
         <Map />
       </div>
       <GoToTop />
+      <>
+        {show && (
+          <ReactCanvasConfetti refConfetti={getInstance} style={canvasStyles} />
+        )}
+        <Modal
+          show={show}
+          onHide={toggle}
+          size="lg"
+          aria-labelledby="contained-modal-title-vcenter"
+          centered
+          backdrop={false}
+        >
+          <Modal.Header closeButton></Modal.Header>
+          <Modal.Body className="col-lg">
+            <img
+              src="https://images.pexels.com/photos/7957121/pexels-photo-7957121.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              width={"100%"}
+              height={"100%"}
+              alt="ramadan"
+            />
+          </Modal.Body>
+        </Modal>
+      </>
     </>
   );
 }
