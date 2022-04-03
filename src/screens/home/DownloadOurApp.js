@@ -12,7 +12,7 @@ function DownloadOurApp() {
       <p className="display-6">Download our App.</p>
       <div className="col-lg">
         <a
-          href="https://apps.apple.com/us/app/wikipedia/id324715238?itsct=apps_box_badge&amp;itscg=30200"
+          href="https://apps.apple.com/tr/app/quran-qaidah-level-1/id1536581660"
           style={{
             borderRadius: "13px",
             width: "250px",
@@ -29,7 +29,7 @@ function DownloadOurApp() {
       </div>
       <div className="col-lg">
         <a
-          href="https://play.google.com/store/apps/details?id=org.wikipedia&hl=en_US&gl=US&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+          href="https://play.google.com/store/apps/details?id=air.com.fatima.quranqaidah1"
           style={{
             borderRadius: "13px",
             width: "250px",

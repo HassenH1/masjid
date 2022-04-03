@@ -43,13 +43,13 @@ function Events() {
                         </span>
                         <br />
                         <span className="widget-49-date-month">
-                          {"Monday thru Thursday"}
+                          {each.dayOfWeek}
                         </span>
                       </div>
                       <div className="widget-49-meeting-info">
                         <span className="widget-49-pro-title"></span>
                         <span className="widget-49-meeting-time">
-                          4:00 to 6:00 o'clock
+                          {each.clock}
                         </span>
                       </div>
                     </div>
