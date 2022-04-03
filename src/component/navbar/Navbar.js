@@ -32,7 +32,7 @@ const NavbarComponent = () => {
               <li className="nav-item">
                 <a
                   className="nav-link text-white"
-                  href="https://www.gofundme.com/f/masjidfaatimah2021"
+                  href="https://www.gofundme.com/f/masjidfaatimah2022"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
