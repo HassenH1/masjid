@@ -1,10 +1,9 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 import Madrash from "./../assets/madrash.png";
 
 const DataContext = createContext();
 
 function DataProvider({ children }) {
-  const [hadith, setHadith] = useState("");
   const [events, setEvents] = useState([
     {
       title: "Taraweeh Prayer",
@@ -27,24 +26,8 @@ function DataProvider({ children }) {
     day: "numeric",
   };
 
-  const getHadith = async () => {
-    try {
-      const hadithResponse = await fetch(
-        "https://masjid-server.herokuapp.com/"
-      );
-      const hadithToJSON = await hadithResponse.json();
-      hadithToJSON && setHadith(hadithToJSON);
-    } catch (e) {
-      setHadith(e);
-    }
-  };
-
-  useEffect(() => {
-    getHadith();
-  }, []);
-
   return (
-    <DataContext.Provider value={{ hadith, today, options, events, setEvents }}>
+    <DataContext.Provider value={{ today, options, events, setEvents }}>
       {children}
     </DataContext.Provider>
   );

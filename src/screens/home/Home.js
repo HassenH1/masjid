@@ -1,13 +1,10 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Header from "./Header";
-import Loading from "../../component/loading/Loading";
 import CurrentServices from "./CurrentServices";
 import About from "./About";
 import DownloadOurApp from "./DownloadOurApp";
 import ProgramsAndSchedules from "./ProgramsAndSchedules";
 import GoToTop from "./GoToTop";
-import QuickHadith from "./QuickHadith";
-import { useData } from "../../context/data-context";
 import Map from "./Map";
 import useModal from "../../hooks/useModal";
 import { Modal } from "react-bootstrap";
@@ -44,8 +41,6 @@ function getAnimationSettings(originXA, originXB) {
 function Home() {
   const refAnimationInstance = useRef(null);
   const [intervalId, setIntervalId] = useState();
-
-  const { hadith } = useData();
   const { show, toggle } = useModal(true);
 
   useEffect(() => {
@@ -85,7 +80,6 @@ function Home() {
       <Header />
       <DownloadOurApp />
       <div className="container" id="home">
-        {!hadith ? <Loading /> : <QuickHadith hadith={hadith} />}
         <About />
         <ProgramsAndSchedules />
         <CurrentServices />
