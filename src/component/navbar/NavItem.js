@@ -1,7 +1,7 @@
 import React from "react";
 
 function NavItem(props) {
-  const { href, text, target, rel } = props;
+  const { href, text } = props;
 
   return (
     <li className="nav-item">
