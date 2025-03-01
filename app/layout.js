@@ -1,9 +1,6 @@
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 import Layout from "./components/general/layout/Layout";
-import { ThemeProvider } from "@mui/material/styles";
 import { Roboto } from "next/font/google";
-import theme from "./theme";
-import "./App.css";
+import "./globals.css";
 
 const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
@@ -21,11 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={roboto.variable}>
-        <AppRouterCacheProvider>
-          <ThemeProvider theme={theme}>
-            <Layout>{children}</Layout>
-          </ThemeProvider>
-        </AppRouterCacheProvider>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );
