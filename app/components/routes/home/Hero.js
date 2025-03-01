@@ -1,7 +1,6 @@
 import React from "react";
-// import FRONTOFMASJID from "../../assets/masjidfront (2).jpg";
 
-function Header() {
+function Hero() {
   return (
     <div className="carousel slide">
       <div className="carousel-inner">
@@ -17,4 +16,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Hero;

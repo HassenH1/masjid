@@ -1,7 +1,6 @@
 import React from "react";
 import Title from "../../component/title/Title";
 import PrayerSchedule from "./PrayerSchedule";
-import Events from "./Events";
 
 function ProgramsAndSchedules() {
   return (
@@ -10,9 +9,6 @@ function ProgramsAndSchedules() {
       <div className="row">
         <div className="col-lg">
           <PrayerSchedule />
-        </div>
-        <div className="col-lg">
-          <Events />
         </div>
       </div>
     </div>
