@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+html {
+  height: 100%; /* Look, it's not fixed anymore! */
+  display: flex;
+  flex-direction: column;
+
+  scroll-behavior: smooth;
+  background-color: whitesmoke !important;
+  font-family: "Vazir", sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+  /* background-color: #f8f4f1 !important; */
+}
+
+body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
