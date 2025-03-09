@@ -8,7 +8,6 @@ const Navbar = () => {
     { name: "About us", href: "#about-us" },
     { name: "Services", href: "#services" },
   ];
-
   return (
     <nav className="bg-white fixed w-full">
       <div className="px-2 sm:px-6 lg:px-8">
