@@ -15,7 +15,7 @@ export default function Page() {
   return (
     <div className="pt-[5%] flex flex-col pb-16">
       <section className="grid grid-cols-1 md:grid-cols-12 grow py-16 px-4 my-9">
-        <div className="md:col-span-6 md:col-start-1 flex flex-col space-y-4 justify-center pl-0 md:pl-6">
+        <div className="md:col-span-6 md:col-start-1 flex flex-col space-y-9 justify-center pl-0 md:pl-6">
           <p className="text-3xl md:text-5xl md:text-left text-center font-extrabold underline underline-offset-8">
             MASJID FAATIMAH
           </p>
