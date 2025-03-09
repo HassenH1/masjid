@@ -31,9 +31,6 @@ export default function Page() {
                 Learn more
               </button>
             </a>
-            <button className="bg-[#FFFF00] hover:cursor-pointer hover:bg-[#e6e600] py-3 px-8 rounded-lg border">
-              Donate
-            </button>
           </div>
         </div>
         <div className="order-first md:order-none md:col-span-6 flex flex-col justify-center">
@@ -167,9 +164,6 @@ export default function Page() {
             not decrease wealth”
           </p>
         </div>
-        <button className="bg-blue-400 hover:cursor-pointer hover:bg-blue-500 py-2 px-12 rounded-lg text-white">
-          Donate
-        </button>
       </section>
 
       <section className="px-4 lg:px-32 space-y-5 py-16 h-96">
