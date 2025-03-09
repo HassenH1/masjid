@@ -3,7 +3,7 @@ import Navbar from "./components/general/navbar/Navbar";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 
-const playFairDisplay = Open_Sans({
+const openSans = Open_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
   subsets: ["latin"],
   display: "swap",
@@ -16,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={playFairDisplay.className}>
+    <html lang="en" className={openSans.className}>
       <body>
         <Navbar />
         {children}

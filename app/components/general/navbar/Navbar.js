@@ -7,7 +7,6 @@ const Navbar = () => {
   const navItems = [
     { name: "About us", href: "#about-us" },
     { name: "Services", href: "#services" },
-    { name: "Contact", href: "#contact-us" },
   ];
 
   return (

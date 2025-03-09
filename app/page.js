@@ -1,5 +1,6 @@
 // icon: https://www.flaticon.com/search
 // gradients: https://cssgradient.io/
+// prayer time: https://aladhan.com/prayer-times-api
 export default function Page() {
   const services = [
     { icon: "./shalat.png", title: "5x Daily Prayer" },
@@ -15,7 +16,7 @@ export default function Page() {
   return (
     <div className="pt-[5%] flex flex-col pb-16">
       <section className="grid grid-cols-1 md:grid-cols-12 grow py-16 px-4 my-9">
-        <div className="md:col-span-6 md:col-start-1 flex flex-col space-y-9 justify-center pl-0 md:pl-6">
+        <div className="md:col-span-6 flex flex-col space-y-9 justify-center pl-0 md:px-6">
           <p className="text-3xl md:text-5xl md:text-left text-center font-extrabold underline underline-offset-8">
             MASJID FAATIMAH
           </p>
@@ -35,7 +36,7 @@ export default function Page() {
             </button>
           </div>
         </div>
-        <div className="order-first md:order-none md:col-span-6 md:col-start-7 flex flex-col justify-center">
+        <div className="order-first md:order-none md:col-span-6 flex flex-col justify-center">
           <img
             src="./masjidfront (2).jpg"
             className="rounded-2xl mb-9 md:mb-0 w-full aspect-3/2 object-cover"
@@ -70,23 +71,27 @@ export default function Page() {
                 </tr>
                 <tr className="border-b-2 border-[#f8d8b0] border-dotted">
                   <td className="md:text-lg font-extralight">Fajir</td>
-                  <td className="text-right">5:15 am</td>
+                  <td className="text-right">6:03 am</td>
                 </tr>
                 <tr className="border-b-2 border-[#f8d8b0] border-dotted">
                   <td className="md:text-lg font-extralight">Dhuhr</td>
-                  <td className="text-right">1:15 pm</td>
+                  <td className="text-right">1:04 pm</td>
                 </tr>
                 <tr className="border-b-2 border-[#f8d8b0] border-dotted">
                   <td className="md:text-lg font-extralight">Asr</td>
-                  <td className="text-right">6:00 pm</td>
+                  <td className="text-right">4:25 pm</td>
                 </tr>
                 <tr className="border-b-2 border-[#f8d8b0] border-dotted">
                   <td className="md:text-lg font-extralight">Maghrib</td>
-                  <td className="text-right">sunset</td>
+                  <td className="text-right">6:56 pm</td>
                 </tr>
                 <tr className="border-b-2 border-[#f8d8b0] border-dotted">
                   <td className="md:text-lg font-extralight">Isha'a</td>
-                  <td className="text-right">9:00 pm </td>
+                  <td className="text-right">8:05 pm </td>
+                </tr>
+                <tr className="border-b-2 border-[#f8d8b0] border-dotted">
+                  <td className="md:text-lg font-extralight">Jummah</td>
+                  <td className="text-right">12:40 pm </td>
                 </tr>
               </tbody>
             </table>
@@ -181,10 +186,6 @@ export default function Page() {
           allowFullScreen
         />
       </section>
-
-      {/* <section className="px-4 lg:px-32 space-y-5 py-16" id="contact-us">
-        <p className="text-2xl md:text-3xl font-semibold">Get In Touch</p>
-      </section> */}
     </div>
   );
 }
