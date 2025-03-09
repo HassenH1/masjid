@@ -1,57 +1,15 @@
 import React from "react";
 
 function Footer() {
-  const url = "https://www.facebook.com/MasjidFaatimahAzZahra/";
   return (
-    <div className="footer">
-      <div
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignContent: "center",
-          padding: "19px",
-          textAlign: "center",
-          margin: "auto",
-        }}
-      >
-        Masjid Faatimah {"©"} {new Date().getFullYear()}. All Rights Reserved.
+    <footer className="bg-white shadow-sm dark:bg-gray-800">
+      <div className="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+        <span className="flex gap-2 items-center text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <img src="./logo.jpg" className="w-6" />
+          Masjid Faatimah © 2025. All Rights Reserved.
+        </span>
       </div>
-      <div
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignContent: "center",
-          padding: "19px",
-          textAlign: "center",
-          margin: "auto",
-        }}
-      >
-        <a
-          href={url}
-          style={{
-            borderRadius: "50%",
-            border: "1px solid gold",
-            padding: "8px 15px",
-          }}
-        >
-          {" "}
-          <i className="fa fa-facebook" aria-hidden="true"></i>{" "}
-        </a>
-      </div>
-      <div
-        style={{
-          flex: 1,
-          flexDirection: "row",
-          padding: "19px",
-          textAlign: "center",
-          margin: "auto",
-        }}
-      >
-        15012 Prairie Ave Suite A, Hawthorne CA, 90250
-        <br />
-        Call: (480) 621-0096
-      </div>
-    </div>
+    </footer>
   );
 }
 

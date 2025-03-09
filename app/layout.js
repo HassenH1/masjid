@@ -1,13 +1,6 @@
-import Layout from "./components/general/layout/Layout";
-import { Roboto } from "next/font/google";
+import Footer from "./components/general/footer/Footer";
+import Navbar from "./components/general/navbar/Navbar";
 import "./globals.css";
-
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-roboto",
-});
 
 export const metadata = {
   title: "Masjid Faatimah",
@@ -17,8 +10,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={roboto.variable}>
-        <Layout>{children}</Layout>
+      <body>
+        <Navbar />
+        {children}
+        <Footer />
       </body>
     </html>
   );
