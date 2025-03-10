@@ -9,7 +9,7 @@ const Navbar = () => {
     { name: "Services", href: "#services" },
   ];
   return (
-    <nav className="bg-white fixed w-full">
+    <nav className="bg-white fixed w-full max-w-[1500px]">
       <div className="px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
