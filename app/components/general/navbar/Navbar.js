@@ -8,6 +8,8 @@ const Navbar = () => {
     { name: "About us", href: "#about-us" },
     { name: "Services", href: "#services" },
   ];
+  const toggleOpen = () => setOpen(false);
+
   return (
     <nav className="bg-white fixed w-full max-w-[1500px]">
       <div className="px-2 sm:px-6 lg:px-8">
@@ -60,6 +62,7 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
+                    // onClick={toggleOpen}
                     className="rounded-md px-3 py-2 text-sm font-medium hover:bg-blue-950 hover:text-gray-500"
                     aria-current="page"
                   >
@@ -110,6 +113,7 @@ const Navbar = () => {
             <a
               key={item.name}
               href={item.href}
+              onClick={toggleOpen}
               className="block rounded-md px-3 py-2 text-base font-medium hover:bg-blue-950 hover:text-gray-500"
               aria-current="page"
             >
